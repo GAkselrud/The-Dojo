@@ -1,1 +1,1 @@
-# Sensei-Misha-s-Dojo
+# Sensei-MishasDojo
