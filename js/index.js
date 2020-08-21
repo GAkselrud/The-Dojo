@@ -15,6 +15,10 @@ getGitUsers().then(users => {
     users.forEach(user => {
         console.log(user);
         
+
+
+
+        
        
     })
 })
