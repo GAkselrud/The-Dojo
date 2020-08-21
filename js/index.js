@@ -13,9 +13,14 @@ catch(err) {
 
 getGitUsers().then(users => {
     //console.log(users)
-    users.forEach(user => {
+    users.forEach(user => {  
         console.log(user);
-        document.body.innerHTML += `<div><img src="${user.avatar_url}"/><a href=${user.url}>${user.login}</a></div>`;
+        document.body.innerHTML += `<div><a href=${user.url}>
+        ${user.login}>
+        ${user.avatar_url}>
+        ${user.followers_url}>
+        ${user.following_url}></a>
+        </div>`;
     })
 })
 
