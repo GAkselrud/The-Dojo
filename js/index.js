@@ -24,4 +24,3 @@ getGitUsers().then(users => {
 
 
 
-
