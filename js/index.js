@@ -14,11 +14,19 @@ getGitUsers().then(users => {
     //console.log(users)
     users.forEach(user => {
         console.log(user);
+
+
+
+
+        document.body.innerHTML += `
+        <section>
+        <img src="${user.avatar_url}">
         
-
-
-
-        
+        <h2>${user.login}</h2>
+        ${user.followers_url}
+        ${user.following_url}
+        <a href=${user.html_url}>Go to profile</a>
+        </section>`;
        
     })
 })
