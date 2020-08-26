@@ -1,13 +1,14 @@
 console.log('Execute Order 66');
 const USERS_API = 'https://api.github.com/users'
 
-async function getGitUsers(url) {
+async function getGitUsers(url, count=30) {
+   console.log(url + `per_page=${count}`)
     try {
-        const response = await fetch(url);
+        const response = await fetch(url + `per_page=${count}`);
         return await response.json()
     }
     catch (err) {
-        alert(err);
+        alert(err = 'You Dumb')
     }
 };
 
@@ -16,7 +17,10 @@ getGitUsers(USERS_API).then(users => {
     users.forEach(user => {
     console.log(users)
        
+    let followerCount = getGitUsers(user.followers_url, 1000000).then(followers => {
+        return followers.length     
 
+    })
 
 
 
@@ -27,14 +31,14 @@ getGitUsers(USERS_API).then(users => {
         <h2>${user.login}</h2>
         ${user.followers_url}
         ${user.following_url}
+        ${followerCount}
         <a href=${user.html_url}>Go to profile</a>
         </section>`;
-       getGitUsers(user.followers_url).then(followers => {
+       
          
        
     })
     })
-})
 
 
 
