@@ -26,10 +26,10 @@ getGitUsers(USERS_API).then(users => {
 
         <section>
         <img src="${user.avatar_url}">
-        <h2>${user.login}</h2>
-        <p>Followers : ${countFollowers}</p>
-        <p>Following : ${countFollowing}</p>
-        <button><a href=${user.html_url}>Go to profile</a></button>
+        <h2><a href=${user.html_url}>${user.login}</a></h2>
+        <p><a href=${user.followers_url}> Followers</a> : ${countFollowers}</p>
+        <p><a href=${user.following_url}> Following</a> : ${countFollowing}</p>
+        <button><a href=${user.html_url}>CHECK IT OUT</a></button>
         </section>`;
         })
     })
