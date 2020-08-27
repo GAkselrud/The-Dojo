@@ -19,9 +19,9 @@ getGitUsers(USERS_API).then(users => {
         console.log(users)
 
         getGitUsers(user.followers_url, 1000000).then(followers => {
-     let countFollowers = followers.length >= 100? "100+" : followers.length
+     let countFollowers = followers.length >= 100? "дoхуя" : followers.length
      getGitUsers(user.followers_url, 1000000).then(following => {
-     let countFollowing = following.length >= 100? "100+" : following.length       
+     let countFollowing = following.length >= 100? "дoхуя" : following.length       
      document.body.innerHTML += `
 
         <section>
