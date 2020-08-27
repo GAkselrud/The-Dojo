@@ -20,7 +20,10 @@ getGitUsers(USERS_API).then(users => {
 
         getGitUsers(user.followers_url, 1000000).then(followers => {
      let countFollowers = followers.length >= 100? "100+" : followers.length
-            document.body.innerHTML += `
+     getGitUsers(user.followers_url, 1000000).then(following => {
+     let countFollowing = following.length >= 100? "100+" : following.length       
+     document.body.innerHTML += `
+
         <section>
         <img src="${user.avatar_url}">
         <h2>${user.login}</h2>
@@ -30,6 +33,7 @@ getGitUsers(USERS_API).then(users => {
         </section>`;
         })
     })
+})
 });
 
 
