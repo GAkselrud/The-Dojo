@@ -10,19 +10,21 @@ async function getGitUsers(url, count = 30) {
     catch (err) {
         console.error(err)
     }
+    
 };
 
-let  = 
 
 getGitUsers(USERS_API).then(users => {
+    let out = '';
     users.forEach(user => {
         //console.log(users)
+       
 
         getGitUsers(user.followers_url, 1000000).then(followers => {
      let countFollowers = followers.length >= 100? "дoхуя(>100)" : followers.length
         getGitUsers(user.followers_url, 1000000).then(following => {
      let countFollowing = following.length >= 100? "дoхуя(>100)" : following.length       
-         document.body.innerHTML += `
+         out += `
 
         <section>
         <img src="${user.avatar_url}">
@@ -32,8 +34,13 @@ getGitUsers(USERS_API).then(users => {
         <button><a href=${user.html_url}>CHECK IT OUT</a></button>
         </section>`;
         })
+        document.body.innerHTML += out
+        //console.log(out)
+        
     })
+  
 })
+
 });
 
 
