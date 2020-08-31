@@ -1,4 +1,4 @@
-console.log('Execute Order 66');
+//console.log('Execute Order 66');
 const USERS_API = 'https://api.github.com/users'
 
 async function getGitUsers(url, count = 30) {
@@ -12,17 +12,17 @@ async function getGitUsers(url, count = 30) {
     }
 };
 
-
+let  = 
 
 getGitUsers(USERS_API).then(users => {
     users.forEach(user => {
-        console.log(users)
+        //console.log(users)
 
         getGitUsers(user.followers_url, 1000000).then(followers => {
-     let countFollowers = followers.length >= 100? "дoхуя" : followers.length
-     getGitUsers(user.followers_url, 1000000).then(following => {
-     let countFollowing = following.length >= 100? "дoхуя" : following.length       
-     document.body.innerHTML += `
+     let countFollowers = followers.length >= 100? "дoхуя(>100)" : followers.length
+        getGitUsers(user.followers_url, 1000000).then(following => {
+     let countFollowing = following.length >= 100? "дoхуя(>100)" : following.length       
+         document.body.innerHTML += `
 
         <section>
         <img src="${user.avatar_url}">
