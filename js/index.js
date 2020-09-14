@@ -22,14 +22,14 @@ getGitUsers(USERS_API).then(users => {
             let countFollowers = followers.length >= 100 ? "100+" : followers.length
             getGitUsers(user.followers_url, 1000000).then(following => {
                 let countFollowing = following.length >= 100 ? "100+" : following.length
-                document.querySelector('container').innerHTML += `
+                document.querySelector('.container').innerHTML += `
 
         
         <div class="card">
         <img class="card__pic" src="${user.avatar_url}">
         <h2 class="card__login"><a href=${user.html_url}>${user.login}</a></h2>
         <p class="card__followers"><a href=${user.followers_url}> Followers</a> : ${countFollowers}</p>
-        <p class="card__following><a href=${user.following_url}> Following</a> : ${countFollowing}</p>
+        <p class="card__following"><a href=${user.following_url}> Following</a> : ${countFollowing}</p>
         <p class="card__link"><a href=${user.html_url}>CHECK IT OUT</a></p>
         </div>`;
             })
