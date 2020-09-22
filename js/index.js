@@ -27,10 +27,10 @@ getGitUsers(USERS_API).then(users => {
         
         <div class="card">
         <img class="card__pic" src="${user.avatar_url}">
-        <h2 class="card__login"><a href=${user.html_url}>${user.login}</a></h2>
-        <p class="card__followers"><a href=${user.followers_url}> Followers</a> : ${countFollowers}</p>
-        <p class="card__following"><a href=${user.following_url}> Following</a> : ${countFollowing}</p>
-        <p class="card__link"><a href=${user.html_url}>CHECK IT OUT</a></p>
+        <h2 class="card__username">${user.login}</h2>
+        <p class="card__followers"><a href=${user.followers_url} target="_blank"> Followers</a> : ${countFollowers}</p>
+        <p class="card__following"><a href=${user.following_url} target="_blank"> Following</a> : ${countFollowing}</p>
+        <p class="card__link"><a href=${user.html_url} target="_blank">Go to Profile</a></p>
         </div>`;
             })
         })
