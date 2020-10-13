@@ -1,0 +1,117 @@
+body {
+    background-image: url("../img/gucci.jpg"); 
+    background-repeat: repeat;
+    background-size: auto;
+  
+}
+
+
+.footer{
+    font-family: 'Permanent Marker', cursive;
+    text-align: end;
+    
+    font-size: 68px;
+}
+.footer__words{
+    color: rgb(114, 241, 125);
+    text-decoration: underline;
+}
+.footer__link{
+    color:rgb(35, 25, 180);
+}
+.title {
+    color:forestgreen ;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 72px;
+    text-decoration:underline ;
+    text-transform: uppercase;
+    text-align: center;
+    /* text-anchor: middle; */
+    /* margin-top: 50px;
+    margin-bottom: 100px; */
+    }
+     
+    svg{
+        color: rgb(114, 241, 125);
+    align-items: center;
+
+    }
+.container {
+    display: flex;
+    /* flex-wrap: column; */
+    flex-flow: wrap;         
+    justify-content: space-evenly;
+    /* align-content: space-between; */
+    /* justify-items: auto;  */
+}
+.card {
+    background-image: url("../img/ben.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 0 45px rgb(35, 25, 180);
+     padding: 10px;
+     box-shadow: inset 0px 0px 20px 14px lightslategrey;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden ;
+   align-items: center;
+   /* justify-content: stretch; */
+    margin: 15px;
+    line-height: 97px;
+    width: 28%;
+  
+
+} 
+.card a:link{
+    color:rgb(35, 25, 180);
+}
+.card a:visited{
+    color: rgb(146, 42, 137);
+}
+
+.card__pic {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 17px;
+    margin-top: 3px;
+    border-radius: 150px;
+    box-shadow: -1px 0px 20px 9px rgb(48, 85, 66);
+}
+
+.card__username {
+
+    color: rgb(12, 14, 11);
+    font-family: 'Nosifer', cursive;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 46px;
+    object-position: bottom;
+    object-position: bottom;
+    margin-bottom: 19px;
+    margin-top: -25px;
+    text-shadow: -2px 3px 0px whitesmoke;
+}
+
+.card__followers, .card__following {
+    font-family: 'Rock Salt', cursive;
+    font-variant: small-caps;
+    font-weight: 800;
+    font-size: 28px; 
+    font-size: 28px;
+    margin-bottom: -44px;
+    text-shadow: -4px 5px 9px mediumaquamarine;
+    
+}
+
+.card__link{
+   
+    color: rgb(35, 25, 180);
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size: 70px;
+    margin-top: 120px;
+   
+}
